@@ -21,9 +21,12 @@ const makeGallery = (({url, alt}) => `<li class = "gallery__item">
    </li>`
 );
 
-const galleryCardsArr = images.map(el => makeGallery(el));
 
+const galleryCardsArr = images.map(el => makeGallery(el));
 listGalleryEl.insertAdjacentHTML(`beforeend`, galleryCardsArr);
+// listGalleryEl.innerHTML = images.reduce((acc,el)=> acc += `<li class = "gallery__item">
+// <img src="${el.url}" alt="${el.alt}">
+// </li>`, '')
 
 
 
